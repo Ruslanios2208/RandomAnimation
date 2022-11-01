@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import SpringAnimation
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet var infoSpringView: SpringView!
+    
+    @IBAction func startButtonPressed(_ sender: UIButton) {
+//        infoSpringView.animation =
+//        infoSpringView.curve =
+//        infoSpringView.force =
+//        sender.setTitle("", for: .normal)
+        infoSpringView.animate()
     }
-
-
 }
 
