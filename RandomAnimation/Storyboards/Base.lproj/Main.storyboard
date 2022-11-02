@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomAnimation" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="curveLabel" destination="Zo5-TE-hkU" id="ueW-Qd-h8I"/>
+                        <outlet property="delayLabel" destination="VM6-u1-dbO" id="M2u-sw-tOR"/>
+                        <outlet property="durationLabel" destination="zgO-z8-D2U" id="SSQ-0I-JSr"/>
+                        <outlet property="forceLabel" destination="KTj-gV-4dO" id="Xie-QE-EIc"/>
                         <outlet property="infoSpringView" destination="IoN-g1-bVi" id="DCJ-eE-sZm"/>
+                        <outlet property="presetLabel" destination="s9m-8w-tIH" id="UUC-72-N49"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

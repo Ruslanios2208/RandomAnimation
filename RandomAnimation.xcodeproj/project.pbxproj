@@ -14,6 +14,8 @@
 		E4D5DB5F2911932100D86E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D5DB5E2911932100D86E1C /* Assets.xcassets */; };
 		E4D5DB622911932100D86E1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D5DB602911932100D86E1C /* LaunchScreen.storyboard */; };
 		E4D5DB6B2911982600D86E1C /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = E4D5DB6A2911982600D86E1C /* SpringAnimation */; };
+		E4FCE0FD2912BF7F00667549 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCE0FC2912BF7F00667549 /* Animation.swift */; };
+		E4FCE1002912CB8900667549 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCE0FF2912CB8900667549 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		E4D5DB5E2911932100D86E1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4D5DB612911932100D86E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D5DB632911932100D86E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4FCE0FC2912BF7F00667549 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		E4FCE0FF2912CB8900667549 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +62,57 @@
 		E4D5DB542911931F00D86E1C /* RandomAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				E4D5DB552911931F00D86E1C /* AppDelegate.swift */,
-				E4D5DB572911931F00D86E1C /* SceneDelegate.swift */,
-				E4D5DB592911931F00D86E1C /* ViewController.swift */,
-				E4D5DB5B2911931F00D86E1C /* Main.storyboard */,
+				E4FCE0FA2912BF4300667549 /* ViewControllers */,
+				E4FCE0FB2912BF4D00667549 /* Models */,
+				E4FCE0FE2912CB6C00667549 /* Services */,
+				E4FCE0F92912BF3700667549 /* Storyboards */,
+				E4FCE0F82912BF2B00667549 /* App */,
 				E4D5DB5E2911932100D86E1C /* Assets.xcassets */,
-				E4D5DB602911932100D86E1C /* LaunchScreen.storyboard */,
-				E4D5DB632911932100D86E1C /* Info.plist */,
 			);
 			path = RandomAnimation;
+			sourceTree = "<group>";
+		};
+		E4FCE0F82912BF2B00667549 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5DB552911931F00D86E1C /* AppDelegate.swift */,
+				E4D5DB572911931F00D86E1C /* SceneDelegate.swift */,
+				E4D5DB632911932100D86E1C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E4FCE0F92912BF3700667549 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5DB5B2911931F00D86E1C /* Main.storyboard */,
+				E4D5DB602911932100D86E1C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E4FCE0FA2912BF4300667549 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5DB592911931F00D86E1C /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E4FCE0FB2912BF4D00667549 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4FCE0FC2912BF7F00667549 /* Animation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E4FCE0FE2912CB6C00667549 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E4FCE0FF2912CB8900667549 /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +194,8 @@
 			files = (
 				E4D5DB5A2911931F00D86E1C /* ViewController.swift in Sources */,
 				E4D5DB562911931F00D86E1C /* AppDelegate.swift in Sources */,
+				E4FCE0FD2912BF7F00667549 /* Animation.swift in Sources */,
+				E4FCE1002912CB8900667549 /* DataStore.swift in Sources */,
 				E4D5DB582911931F00D86E1C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7QDNJU74Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomAnimation/Info.plist;
+				INFOPLIST_FILE = RandomAnimation/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +376,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7QDNJU74Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomAnimation/Info.plist;
+				INFOPLIST_FILE = RandomAnimation/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
