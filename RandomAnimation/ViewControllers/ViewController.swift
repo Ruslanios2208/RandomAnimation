@@ -8,24 +8,20 @@
 import UIKit
 import SpringAnimation
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet var infoSpringView: SpringView!
-    
-    @IBOutlet var presetLabel: UILabel!
-    @IBOutlet var curveLabel: UILabel!
-    @IBOutlet var forceLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var delayLabel: UILabel!
+    @IBOutlet var parametersLabel: UILabel! {
+        didSet {
+            parametersLabel.text = animation.description
+        }
+    }
     
     private var animation = Animation.getRandomAnimation()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setValuesToLabels()
-    }
-    
     @IBAction func startButtonPressed(_ sender: UIButton) {
+        parametersLabel.text = animation.description
+        
         infoSpringView.animation = animation.preset
         infoSpringView.curve = animation.curve
         infoSpringView.force = animation.force
@@ -36,14 +32,6 @@ class ViewController: UIViewController {
         animation = Animation.getRandomAnimation()
         
         sender.setTitle("Start \(animation.preset)", for: .normal)
-    }
-    
-    private func setValuesToLabels() {
-        presetLabel.text = "preset: " + animation.preset
-        curveLabel.text = "curve: " + animation.curve
-        forceLabel.text = "force: " + String(format: "%.2f", animation.force)
-        durationLabel.text = "duration: " + String(format: "%.2f", animation.duration)
-        delayLabel.text = "delay: " + String(format: "%.2f", animation.delay)
     }
 }
 
